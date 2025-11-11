@@ -1,3 +1,4 @@
+cat > koneksi.php <<'PHP'
 <?php
 $host = 'localhost';
 $user = 'root';
@@ -6,8 +7,10 @@ $db   = 'db_praktikum';
 
 $koneksi = mysqli_connect($host, $user, $pass, $db);
 
+if(!$koneksi){
     echo 'Koneksi gagal!';
 } else {
     echo 'Koneksi berhasil!';
 }
 ?>
+PHP
